@@ -1,9 +1,15 @@
-*, *::after, *::before {
+*,
+*::after,
+*::before {
     box-sizing: border-box;
 }
 
 body {
-    background: linear-gradient(to right, hsl(200, 100%, 50%), hsl(175, 100%, 50%));
+    background: linear-gradient(
+        to right,
+        hsl(200, 100%, 50%),
+        hsl(175, 100%, 50%)
+    );
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,7 +34,7 @@ header {
 }
 
 .clock::after {
-    content: '';
+    content: "";
     position: absolute;
     top: 50%;
     left: 50%;
@@ -45,7 +51,7 @@ header {
     position: absolute;
     bottom: 50%;
     left: 50%;
-    transform: translateX(-50%) rotate(calc(var(--hand-rotate)*1deg));
+    transform: translateX(-50%) rotate(calc(var(--hand-rotate) * 1deg));
     z-index: 10;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
@@ -84,26 +90,81 @@ header {
     transform: rotate(var(--inner-rotation));
 }
 
-.number1 { --rotation: 30deg; }
-.number2 { --rotation: 60deg; }
-.number3 { --rotation: 90deg; }
-.number4 { --rotation: 120deg; }
-.number5 { --rotation: 150deg; }
-.number6 { --rotation: 180deg; }
-.number7 { --rotation: 210deg; }
-.number8 { --rotation: 240deg; }
-.number9 { --rotation: 270deg; }
-.number10 { --rotation: 300deg; }
-.number11 { --rotation: 330deg; }
+.number1 {
+    --rotation: 30deg;
+}
+.number2 {
+    --rotation: 60deg;
+}
+.number3 {
+    --rotation: 90deg;
+}
+.number4 {
+    --rotation: 120deg;
+}
+.number5 {
+    --rotation: 150deg;
+}
+.number6 {
+    --rotation: 180deg;
+}
+.number7 {
+    --rotation: 210deg;
+}
+.number8 {
+    --rotation: 240deg;
+}
+.number9 {
+    --rotation: 270deg;
+}
+.number10 {
+    --rotation: 300deg;
+}
+.number11 {
+    --rotation: 330deg;
+}
 
-.inner1 { --inner-rotation: -30deg; }
-.inner2 { --inner-rotation: -60deg; }
-.inner3 { --inner-rotation: -90deg; }
-.inner4 { --inner-rotation: -120deg; }
-.inner5 { --inner-rotation: -150deg; }
-.inner6 { --inner-rotation: -180deg; }
-.inner7 { --inner-rotation: -210deg; }
-.inner8 { --inner-rotation: -240deg; }
-.inner9 { --inner-rotation: -270deg; }
-.inner10 { --inner-rotation: -300deg; }
-.inner11 { --inner-rotation: -330deg; }
+.inner1 {
+    --inner-rotation: -30deg;
+}
+.inner2 {
+    --inner-rotation: -60deg;
+}
+.inner3 {
+    --inner-rotation: -90deg;
+}
+.inner4 {
+    --inner-rotation: -120deg;
+}
+.inner5 {
+    --inner-rotation: -150deg;
+}
+.inner6 {
+    --inner-rotation: -180deg;
+}
+.inner7 {
+    --inner-rotation: -210deg;
+}
+.inner8 {
+    --inner-rotation: -240deg;
+}
+.inner9 {
+    --inner-rotation: -270deg;
+}
+.inner10 {
+    --inner-rotation: -300deg;
+}
+.inner11 {
+    --inner-rotation: -330deg;
+}
+
+@media screen and (min-width: 768px) {
+    body {
+        background-color: lightgreen;
+    }
+}
+
+.clock {
+    width: 300px;
+    height: 300px;
+}
