@@ -10,9 +10,9 @@ function clock() {
         minute = (second + date.getMinutes())/60,
         hour = (minute+(date.getHours() > 12 ? date.getHours() - 12 : date.getHours()))/12;
         
-        render(elementSecond, second)
-        render(elementMinute, minute)
-        render(elementHour, hour)
+    render(elementSecond, second)
+    render(elementMinute, minute)
+    render(elementHour, hour)
 }
 
 function render(element, rotation) {
