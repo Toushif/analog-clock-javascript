@@ -158,13 +158,9 @@ header {
     --inner-rotation: -330deg;
 }
 
-@media screen and (min-width: 768px) {
-    body {
-        background-color: lightgreen;
+@media (max-width: 768px) {
+    .clock {
+        width: 300px;
+        height: 300px;
     }
-}
-
-.clock {
-    width: 300px;
-    height: 300px;
 }
